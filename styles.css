@@ -1,0 +1,59 @@
+.user, .assistant{
+    
+    width: 100%;
+    white-space: pre-wrap;
+}
+
+.user p, .assistant p{
+    max-width: 75%;
+    padding: 10px 13px;
+    border-radius: 5px;
+}
+
+button:disabled{
+    background-color: gray;
+}
+
+.typing-animation{
+    display: inline-flex;
+    background-color: #f1f1f1;
+    padding: 10px 13px;
+    border-radius: 50px;
+    margin: 40px auto;    
+}
+
+.typing-animation .dot{
+    width: 7px;
+    height: 7px;
+    background-color: #6c757d;
+    border-radius: 50%;
+    margin: 0 3px;
+    opacity: 0.7;
+    animation: animDots 1.8s var(--delay) ease-in-out infinite;
+}
+
+.dot:nth-child(1){
+    --delay: 200ms;
+}
+
+.dot:nth-child(2){
+    --delay: 300ms;
+}
+
+.dot:nth-child(3){
+    --delay: 400ms;
+}
+@keyframes animDots {
+    0%, 44%{
+        transform: translateY(0px);
+    }
+    28%{
+        transform: translateY(-9px);
+        opacity: 0.4;
+    }
+    44%{
+        opacity: 0.2;
+    }
+    
+}
+
